@@ -1,0 +1,17 @@
+{% extends "base.html"%}
+{% block content%}
+    <div class="jumbotron" style="text-align: center">
+        <h1 style="color:red; text-align: center;padding:30px; font-weight: bolder; font-family: 'Times New Roman', Times, serif; font-size: 600%;"> The Puppy Adoption</h1>
+        <h1> Have a puppy that needs top be adopted?</h1>
+        <p style="font-weight: bold;"> Add a new Puppy to our data base</p>
+        <form method="POST">
+            {{form.hidden_tag()}}
+            <br>
+            <br>
+            {{form.name.label }}  {{form.name()}}<br>
+            <br>
+            {{form.submit()}}
+            <br><br>
+        </form>
+    </div>
+{% endblock%}
