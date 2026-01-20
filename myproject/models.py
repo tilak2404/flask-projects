@@ -9,7 +9,7 @@ class Puppy(db.Model):
     def __init__(self,name):
         self.name=name
     def __repr__(self):
-        return f" Puppy name is {self.name} and owner is {self.owner.name}"
+        return f" Puppy name is {self.name} and owner is {self.owner.name if self.owner else 'None'}"
     
 class Owner(db.Model):
     __tablename__='owners'
